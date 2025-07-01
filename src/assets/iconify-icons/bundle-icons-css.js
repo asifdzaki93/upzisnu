@@ -12,6 +12,10 @@
  */
 import { promises as fs } from 'node:fs'
 import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 // Installation: npm install --save-dev @iconify/tools @iconify/utils @iconify/json @iconify/iconify
 import { cleanupSVG, importDirectory, isEmptyColor, parseColors, runSVGO } from '@iconify/tools'
@@ -19,12 +23,12 @@ import { getIcons, getIconsCSS, stringToIcon } from '@iconify/utils'
 
 const sources = {
   json: [
-    // Iconify JSON file (@iconify/json is a package name, /json/ is directory where files are, then filename)
-    require.resolve('@iconify/json/json/tabler.json')
+    // Ganti require.resolve dengan path string langsung
+    './node_modules/@iconify/json/json/tabler.json'
 
-    // Custom file with only few icons
+    // Custom file dengan hanya beberapa ikon
     /* {
-      filename: require.resolve('@iconify/json/json/line-md.json'),
+      filename: './node_modules/@iconify/json/json/line-md.json',
       icons: ['home-twotone-alt', 'github', 'document-list', 'document-code', 'image-twotone']
     } */
 

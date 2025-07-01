@@ -59,7 +59,7 @@ const Logo = ({ color }) => {
 
   return (
     <div className='flex items-center'>
-      <VuexyLogo className='text-2xl text-primary' />
+      <img src='/images/icon/appicon.png' alt='Logo NU Care-LAZISNU' style={{ height: 40 }} />
       <LogoText
         color={color}
         ref={logoTextRef}
@@ -68,7 +68,7 @@ const Logo = ({ color }) => {
         transitionDuration={transitionDuration}
         isBreakpointReached={isBreakpointReached}
       >
-        {themeConfig.templateName}
+        appZIS
       </LogoText>
     </div>
   )

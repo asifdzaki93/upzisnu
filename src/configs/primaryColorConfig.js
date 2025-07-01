@@ -2,9 +2,15 @@
 const primaryColorConfig = [
   {
     name: 'primary-1',
-    light: '#8F85F3',
-    main: '#7367F0',
-    dark: '#675DD8'
+    light: '#6FCF97',
+    main: '#1A7B3C',
+    dark: '#14592C'
+  },
+  {
+    name: 'secondary-1',
+    light: '#FFE9B3',
+    main: '#F5B041',
+    dark: '#B9770E'
   },
   {
     name: 'primary-2',
